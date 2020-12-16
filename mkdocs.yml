@@ -1,0 +1,9 @@
+site_name: Setup X in Y Minutes
+theme:
+  name: material
+  palette:
+    primary: teal
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
