@@ -165,11 +165,19 @@ max-line-length = 88
 You get decent auto-completion, test running, debugging, linting, etc.
 It also integrates well with poetry (auto-detects the environments).
 
+Install [VSCode] and then the PyLance plugin via `Ctrl+P`:
+```
+ext install ms-python.vscode-pylance
+```
+
+Now VSCode is going to ask you for linter (select flake8) and auto-formatter
+(select black).
 
 
 ## Type checking
 
 Python supports optional [type hints](https://www.python.org/dev/peps/pep-0484/).
+i.e. optional type annotations.
 They are not used at runtime, but can be used by tools to do linting and
 improve auto-completion.
 By using [VSCode] and [PyLance] you already get improved linting and
