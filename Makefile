@@ -15,6 +15,10 @@ help:  ## Show this help text
 dpython:  ## Build container for python
 	docker build --tag sxiym:python -f docs/python.Dockerfile . && docker run -it sxiym:python
 
+.PHONY: dgo
+dgo:  ## Build container for go
+	docker build --tag sxiym:go -f docs/go.Dockerfile . && docker run -it sxiym:go
+
 ################################################################################
 # PUBLISH
 .PHONY: publish
