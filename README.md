@@ -9,15 +9,12 @@ but dealing with the setup of X.
 
 ## Publish new Versions
 
-TODO automate this with github actions
+TODO automate this with github actions or similar.
 
 ```bash
 # Make sure you have both repos
 git clone git@github.com:setupxinyminutes/setupxinyminutes.git
 git clone git@github.com:setupxinyminutes/setupxinyminutes.github.io.git
-
-cd setupxinyminutes
-poetry shell
-cd ../setupxinyminutes.github.io
-mkdocs gh-deploy --config-file ../setupxinyminutes/mkdocs.yml --remote-branch master
+# Then
+make publish
 ```

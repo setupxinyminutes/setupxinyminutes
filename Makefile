@@ -14,3 +14,11 @@ help:  ## Show this help text
 .PHONY: dpython
 dpython:  ## Build container for python
 	docker build --tag sxiym:python -f docs/python.Dockerfile . && docker run -it sxiym:python
+
+################################################################################
+# PUBLISH
+.PHONY: publish
+publish:
+	poetry shell && \
+		cd ../setupxinyminutes.github.io && \
+		mkdocs gh-deploy --config-file ../setupxinyminutes/mkdocs.yml --remote-branch master
