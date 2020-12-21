@@ -9,12 +9,26 @@ This is a pretty vanilla setup for python 3 which uses the following tools:
 - Testing: [pytest] [doctests]
 - Type checker: [PyLance]
 
+Note: to recreate this setup via docker checkout
+[python.Dockerfile](python.Dockerfile) and run:
+```bash
+docker build --tag sxiym:python -f docs/python.Dockerfile . && \
+docker run -it sxiym:python
+```
+
+## Basic Setup
+
 With your system package manager install a recent version of python
 (e.g. 3.8 or 3.9, [more details](https://www.python.org/doc/versions/))
 and [ipython] (better REPL with syntax highlighting and auto completion)
 ```bash
 # Ubuntu/Debian
-sudo apt install python3.8 ipython
+sudo apt update && \
+    sudo apt install \
+        ipython3 \
+        python3-distutils \
+        python3-venv \
+        python3.8
 
 # TODO macOS
 # brew install ???
@@ -22,6 +36,8 @@ sudo apt install python3.8 ipython
 # TODO Windows
 # brew install ???
 ```
+
+Now you can enter the python REPL by just typing `python` or `ipython`.
 
 
 ## Packaging
@@ -58,6 +74,7 @@ python3 get-pip.py
 
 # Install pipx
 python3 -m pip install --user pipx
+# `pipx ensurepath` adds ~/.local/bin to your PATH
 python3 -m pipx ensurepath
 
 # In a new shell install poetry via pipx
@@ -153,11 +170,15 @@ Both tools play well with VSCode.
 
 However, `flake8` has to be configured to use the 88 char line length that
 `black` uses:
-```
+```ini
 # file: .flake8
 [flake8]
 max-line-length = 88
 ```
+
+Now you can run `black my_fancy_project` and `flake my_fancy_project` manually,
+or use it with your editor (next section).
+
 
 ## Editor/IDE
 
