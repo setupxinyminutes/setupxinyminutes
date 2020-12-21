@@ -9,8 +9,10 @@ formatter, etc.
 The goal of "Setup X in Y Minutes" is to have for each language X
 
 - a fairly vanilla setup to get started,
-- more opinionated/specialized setups,
-- and a discussion about the ecosystem of X.
+- *maybe* more opinionated/specialized setups,
+- and *maybe* a discussion about the ecosystem of X.
+
+For each setup there is a `Dockerfile` to recreate the setup.
 
 
 ## Contributing
@@ -22,7 +24,7 @@ So go ahead and contribute!
 
 ```bash
 # serve mkdocs
-make
+make serve
 ```
 
 <!-- LINKS -->
