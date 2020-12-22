@@ -15,6 +15,10 @@ The goal of "Setup X in Y Minutes" is to have for each language X
 For each setup there is a `Dockerfile` to recreate the setup.
 
 
+## Setup via Docker
+Each setup for X is accompanied by a `X.Dockerfile`.
+The `Dockerfile` reproduces the described setup.
+
 ## Contributing
 
 This project lives from your contributions!

@@ -33,11 +33,6 @@ go version
 go get -v golang.org/x/tools/gopls
 ```
 
-## Packaging
-
-## Testing
-TODO [go testing]
-
 ## Formatting/Linting
 `gofmt`, the default formatter, comes directly with go so you never have to
 argue about go code style.
@@ -62,6 +57,25 @@ For completeness sake here are the dependencies that get installed:
 TODO see Dockerfile
 ```
 
+## Packaging
+Nowadays go's recommended way to manage code is to use `go modules`.
+TODO describe go modules.
+
+Read [go code organization] for more details.
+
+
+## Testing
+TODO [go testing]
+Go comes with testing build it.
+You can run tests with `go test`.
+
+
+## Next
+"A tour of Go"
+https://tour.golang.org/
+
+"Effective Go"
+https://golang.org/doc/effective_go.html
 
 <!-- LINKS -->
 [VSCode]: https://code.visualstudio.com/
